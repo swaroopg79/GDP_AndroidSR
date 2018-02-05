@@ -14,6 +14,14 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="User Login"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
@@ -38,13 +46,12 @@
             android:text="SignIn" />
 
         <TextView
-
-            android:id="@+id/textsignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:text="Not have an account? Signup Here"
+            android:id="@+id/textViewSignUp"
+            android:textAlignment="center"
             android:layout_margin="15dp"
-            android:text="Not a user? Signup" />
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
