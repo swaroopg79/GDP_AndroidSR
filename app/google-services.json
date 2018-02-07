@@ -77,6 +77,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "238660526223-c5afvgtjuvkuluntvuv4bknfgbogf63c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.s528802.studentregistartion",
+            "certificate_hash": "ce4fd3eea523615334be62dabea1e2f7bda5f84e"
+          }
+        },
+        {
           "client_id": "238660526223-m071svsu9msp755tjajqgd0oson4uojn.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -91,8 +99,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238660526223-3uhlf9k586earmjp8lk3i8rqvm31857m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "nwmsu.Student-Registration-GDP"
+              }
+            },
+            {
+              "client_id": "238660526223-m071svsu9msp755tjajqgd0oson4uojn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
