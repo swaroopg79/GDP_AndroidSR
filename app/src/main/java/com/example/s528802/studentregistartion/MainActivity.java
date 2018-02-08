@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
 
                 // Calling method to upload selected image on Firebase storage.
-                UploadImageFileToFirebaseStorage();
+               // UploadImageFileToFirebaseStorage();
                 registerUser();
 
             }
@@ -226,11 +226,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             // progressDialog.dismiss();
 
                             // Showing toast message after done uploading.
-                            Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "User Registered Successfully ", Toast.LENGTH_LONG).show();
 
                             @SuppressWarnings("VisibleForTests")
                             DataUploadInfo imageUploadInfo = new DataUploadInfo(TempFName,TempLName,TempEmail,TempPassword,taskSnapshot.getDownloadUrl().toString());
-                              System.out.println("I am inside upload Image method");
+                              //System.out.println("I am inside upload Image method");
                             // Getting image upload ID.
                             String ImageUploadId = databaseReference.push().getKey();
 
@@ -301,6 +301,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if(task.isSuccessful()){
                             finish();
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            UploadImageFileToFirebaseStorage();
                         }else{
                             //display some message here
                             Toast.makeText(MainActivity.this,"User already existing-Signup using new user",Toast.LENGTH_LONG).show();
