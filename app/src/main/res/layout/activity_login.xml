@@ -6,54 +6,64 @@
     android:layout_height="match_parent"
     tools:context="com.example.s528802.studentregistartion.Login">
 
-    <LinearLayout
-        android:layout_centerVertical="true"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+    <!--<LinearLayout-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_width="368dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--tools:layout_editor_absoluteY="0dp"-->
+        <!--tools:layout_editor_absoluteX="8dp">-->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="User Login"
+            android:text="CERT Member Login"
             android:id="@+id/textView"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteY="26dp"
+            tools:layout_editor_absoluteX="80dp" />
 
         <EditText
             android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="257dp"
+            android:layout_height="49dp"
             android:layout_margin="15dp"
             android:hint="Enter email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            tools:layout_editor_absoluteY="91dp"
+            tools:layout_editor_absoluteX="64dp" />
 
         <EditText
             android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="259dp"
+            android:layout_height="45dp"
             android:layout_margin="15dp"
             android:hint="Enter password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteY="165dp"
+            tools:layout_editor_absoluteX="64dp" />
 
         <Button
             android:id="@+id/buttonSignin"
-            android:layout_width="match_parent"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="SignIn" />
+            android:text="SignIn"
+            tools:layout_editor_absoluteY="257dp"
+            tools:layout_editor_absoluteX="148dp" />
 
         <TextView
             android:text="Not have an account? Signup Here"
             android:id="@+id/textViewSignUp"
             android:textAlignment="center"
             android:layout_margin="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="333dp"
+            tools:layout_editor_absoluteX="86dp" />
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
 
