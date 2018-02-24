@@ -18,6 +18,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private TextView textViewUserEmail;
     private Button buttonLogout;
 
+// Have to include all the functionalities for uploading photo from camera
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
