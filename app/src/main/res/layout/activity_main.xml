@@ -9,92 +9,89 @@
     <ScrollView
         android:layout_width="368dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
-    <LinearLayout
-        android:layout_centerVertical="true"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
-
-
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Student Registration"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal" />
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
 
-        <EditText
-            android:id="@+id/editTextFname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="Enter FirstName"
-            android:inputType="text" />
-        <EditText
-            android:id="@+id/editTextLname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="Enter LastName"
-            android:inputType="text" />
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="Enter email"
-            android:inputType="textEmailAddress" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Student Registration"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="Enter password"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/editTextFname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Enter FirstName"
+                android:inputType="text" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="200dp"
-            android:id="@+id/ShowImageView"
-            android:layout_below="@+id/textview"
-            android:layout_marginTop="20dp"/>
+            <EditText
+                android:id="@+id/editTextLname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Enter LastName"
+                android:inputType="text" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonChooseImage"
-            android:layout_below="@+id/ShowImageView"
-            android:layout_marginTop="15dp"
-            android:text="Choose Image"/>
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Enter email"
+                android:inputType="textEmailAddress" />
 
-        <Button
-            android:id="@+id/buttonSignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Signup" />
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Enter password"
+                android:inputType="textPassword" />
 
-        <TextView
-            android:text="Already Registered? Signin Here"
-            android:id="@+id/textViewSignin"
-            android:textAlignment="center"
-            android:layout_margin="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/ShowImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/textview"
+                android:layout_marginTop="20dp" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/ButtonChooseImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ShowImageView"
+                android:layout_marginTop="15dp"
+                android:text="Choose Image" />
+
+            <Button
+                android:id="@+id/buttonSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Signup" />
+
+            <TextView
+                android:id="@+id/textViewSignin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Already Registered? Signin Here"
+                android:textAlignment="center" />
+
+        </LinearLayout>
 
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
