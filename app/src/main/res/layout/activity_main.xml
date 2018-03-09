@@ -91,7 +91,13 @@
                 android:text="Already Registered? Signin Here"
                 android:textAlignment="center" />
 
-            
+            <TextView
+                android:id="@+id/forgetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Forget Password"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
