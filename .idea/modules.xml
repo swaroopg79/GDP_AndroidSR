@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StudentRegistartion.iml" filepath="$PROJECT_DIR$/StudentRegistartion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GDP_AndroidSR.iml" filepath="$PROJECT_DIR$/GDP_AndroidSR.iml" />
+      <module fileurl="file://C:\Spring 2018\Projects\GDP_AndroidSR\StudentRegistartion.iml" filepath="C:\Spring 2018\Projects\GDP_AndroidSR\StudentRegistartion.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Spring 2018\Projects\GDP_AndroidSR\app\app.iml" filepath="C:\Spring 2018\Projects\GDP_AndroidSR\app\app.iml" />
     </modules>
   </component>
 </project>

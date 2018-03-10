@@ -1,7 +1,10 @@
 package com.example.s528802.studentregistartion;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,122 +21,49 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+import java.io.File;
 
-    private FirebaseAuth firebaseAuth;
+public class ProfileActivity extends Activity {
 
-    private TextView textViewUserEmail;
-
-
-    //view objects
-    private EditText editDisasterName;
-    private EditText editCriticality;
-    ImageView disasterImage;
-    private Button buutonUploadImage;
-    private Button chooseButtonDisaster;
-    private Button buttonLogout;
-
-
-    // Folder path for Firebase Storage.
-    String Storage_Path = "Disaster_Image_Uploads/";
-
-    // Root Database Name for Firebase Database.
-    String Database_Path = "Student_Database/";
-// Have to include all the functionalities for uploading photo from camera
-// Creating URI.
-    Uri FilePathUri;
-
-    // Creating StorageReference and DatabaseReference object.
-    StorageReference disasterStorageReference;
-    DatabaseReference disasterDatabaseReference;
-
-    // Image request code for onActivityResult() .
-    int Image_Request_Code = 7;
-    // private ProgressDialog progressDialog;
-
-
-    //defining firebaseauth object
-
-
+    Button capture;
+    ImageView imageView;
+    static final int CAM_REQUEST=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-
-
-        disasterStorageReference = FirebaseStorage.getInstance().getReference();
-        disasterDatabaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
-        chooseButtonDisaster = (Button)findViewById(R.id.ButtonChooseImage);
-        disasterImage = (ImageView)findViewById(R.id.ShowImageView);
-
-
-        chooseButtonDisaster.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_main);
+        capture=(Button) findViewById(R.id.captureImage);
+        imageView = (ImageView) findViewById(R.id.imageview);
+        capture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent camera_intent =new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                File file=getFile();
+                camera_intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+                startActivityForResult(camera_intent,CAM_REQUEST);
 
-                // Creating intent.
-                Intent intent = new Intent();
-
-                // Setting intent type as image to select image from phone storage.
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Please Select Image"), Image_Request_Code);
 
             }
         });
-
-        //initializing firebase authentication object
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        //if the user is not logged in
-        //that means current user will return null
-        if(firebaseAuth.getCurrentUser() == null){
-            //closing this activity
-            finish();
-            //starting login activity
-            startActivity(new Intent(this, Login.class));
-        }
-
-        //getting current user
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        //initializing views
-        editDisasterName = (EditText) findViewById(R.id.disasterName);
-        editCriticality = (EditText) findViewById(R.id.criticality);
-        buutonUploadImage = (Button) findViewById(R.id.uploadDisasterImage);
-        textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        //displaying logged in user name
-        textViewUserEmail.setText("Welcome "+user.getEmail());
-
-        buutonUploadImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // Calling method to upload selected image on Firebase storage.
-                // UploadImageFileToFirebaseStorage();
-               // registerUser();
-
-            }
-        });
-
-        //adding listener to button
-        buttonLogout.setOnClickListener(this);
     }
 
+    private File getFile()
+    {
 
+        File folder=new File("sdcard/camera_app");
 
+        if(!folder.exists())
+        {
+            folder.mkdir();
+        }
+        File image_file=new File(folder,"cam_image.jpg");
+        return image_file;
+    }
 
     @Override
-    public void onClick(View view) {
-        //if logout is pressed
-        if(view == buttonLogout){
-            //logging out the user
-            firebaseAuth.signOut();
-            //closing activity
-            finish();
-            //starting login activity
-            startActivity(new Intent(this, Login.class));
-        }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String path="sdcard/camera_app/cam_image.jpg";
+        imageView.setImageDrawable(Drawable.createFromPath(path));
     }
 }
