@@ -6,21 +6,72 @@
     android:layout_height="match_parent"
     tools:context="com.example.s528802.studentregistartion.ProfileActivity"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/captureImage"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Update Disaster Images"
+        android:id="@+id/captureReports"
+        android:layout_gravity="center_horizontal" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textViewUserEmail"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/disasterName"
+        android:hint="Enter Disaster Name"
         android:layout_gravity="center_horizontal"
-        android:text="capture"
         />
 
-    <ImageView
-        android:id="@+id/imageview"
+    <EditText
         android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/criticality"
+        android:hint="Enter Criticality[Low/Medium/High]"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Images"
+        android:id="@+id/uploadDisasterImage"
+        android:layout_gravity="center_horizontal" />
+
+
+    <ImageView
+        android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"/>
+        android:id="@+id/cameraImageView"
+        android:layout_below="@+id/camera"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UploadReports"
+        android:id="@+id/cameraUpload"
+        android:layout_gravity="center_horizontal" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/buttonLogout"
+        android:layout_gravity="center_horizontal" />
 
 
     </LinearLayout>
