@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Enter FirstName"
+                android:hint="*Enter FirstName"
                 android:inputType="text" />
 
             <EditText
@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Enter LastName"
+                android:hint="*Enter LastName"
                 android:inputType="text" />
 
             <EditText
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Enter email"
+                android:hint="*Enter email"
                 android:inputType="textEmailAddress" />
 
             <EditText
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Enter password"
+                android:hint="*Enter password"
                 android:inputType="textPassword" />
 
             <ImageView
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ShowImageView"
                 android:layout_marginTop="15dp"
-                android:text="Choose Image" />
+                android:text="Upload your Photo" />
 
             <Button
                 android:id="@+id/buttonSignup"

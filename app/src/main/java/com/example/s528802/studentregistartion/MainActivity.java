@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -164,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == Image_Request_Code && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             FilePathUri = data.getData();
-
+//Log.d("TAG","+dooooooo"+FilePathUri);
             try {
 
                 // Getting selected image into Bitmap.
@@ -187,12 +188,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Creating Method to get the selected image file Extension from File Path URI.
     public String GetFileExtension(Uri uri) {
 
-        ContentResolver contentResolver = getContentResolver();
+            ContentResolver contentResolver = getContentResolver();
 
-        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+            MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
 
-        // Returning the file Extension.
-        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri)) ;
+             // Returning the file Extension.
+            return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri)) ;
 
     }
 
@@ -293,14 +294,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //progressDialog.show();
 
         //creating a new user
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), UploadImages.class));
                             UploadImageFileToFirebaseStorage();
                         }else{
                             //display some message here

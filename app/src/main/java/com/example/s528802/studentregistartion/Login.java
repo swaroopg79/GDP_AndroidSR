@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), UploadImages.class));
         }
 
         //initializing views
@@ -93,7 +93,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), UploadImages.class));
                         }
                     }
                 });

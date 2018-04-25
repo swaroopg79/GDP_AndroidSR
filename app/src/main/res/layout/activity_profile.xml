@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,13 +8,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.s528802.studentregistartion.ProfileActivity"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Update Disaster Images"
-        android:id="@+id/captureReports"
-        android:layout_gravity="center_horizontal" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/captureReports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:text="Update Disaster Images"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="24sp" />
 
 
 
@@ -22,32 +42,33 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textViewUserEmail"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/disasterName"
-        android:hint="Enter Disaster Name"
         android:layout_gravity="center_horizontal"
-        />
+        android:layout_marginBottom="25dp"/>
 
-    <EditText
-        android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/criticality"
-        android:hint="Enter Criticality[Low/Medium/High]"
-        android:layout_gravity="center_horizontal"
-        />
+            <!--<EditText-->
+                <!--android:id="@+id/disasterName"-->
+                <!--android:layout_width="350dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:hint="Enter Disaster Name"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upload Images"
-        android:id="@+id/uploadDisasterImage"
-        android:layout_gravity="center_horizontal" />
+            <!--<EditText-->
+                <!--android:id="@+id/criticality"-->
+                <!--android:layout_width="350dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:hint="Enter Criticality[Low/Medium/High]"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <Button
+                android:id="@+id/uploadDisasterImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Capture Image" />
 
 
     <ImageView
@@ -58,20 +79,23 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UploadReports"
-        android:id="@+id/cameraUpload"
-        android:layout_gravity="center_horizontal" />
+            <Button
+                android:id="@+id/cameraUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Upload Image"
+                android:layout_marginBottom="25dp"/>
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:id="@+id/buttonLogout"
-        android:layout_gravity="center_horizontal" />
-
-
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Logout"
+                android:textColorLink="@color/common_google_signin_btn_text_dark_disabled"
+                android:layout_marginBottom="25dp"/>
+        </LinearLayout>
+    </ScrollView>
     </LinearLayout>
